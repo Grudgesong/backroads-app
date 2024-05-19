@@ -1,3 +1,4 @@
+import aboutImg from "../images/about.jpeg";
 export default function About() {
   return (
     <>
@@ -10,11 +11,7 @@ export default function About() {
 
         <div className="section-center about-center">
           <div className="about-img">
-            <img
-              src="./images/about.jpeg"
-              className="about-photo"
-              alt="awesome beach"
-            />
+            <img src={aboutImg} className="about-photo" alt="awesome beach" />
           </div>
           <article className="about-info">
             <h3>explore the difference</h3>
