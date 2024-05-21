@@ -1,6 +1,7 @@
 import logo from "../images/logo.svg";
 import { pageLinks, socialLinks } from "../data";
 import PageLinks from "./PageLinks";
+import SocialLink from "./SocialLink";
 
 export default function Navbar() {
   return (
@@ -17,18 +18,9 @@ export default function Navbar() {
           <PageLinks parentClass="nav-links" childrenClass="nav-link" />
 
           <ul className="nav-icons">
-            {socialLinks.map(({ id, href, icon }) => {
+            {socialLinks.map((social) => {
               return (
-                <li key={id}>
-                  <a
-                    href={href}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="nav-icon"
-                  >
-                    <i className={icon}></i>
-                  </a>
-                </li>
+                <SocialLink key={social.id} {...social} itemClass="nav-icon" />
               );
             })}
           </ul>
